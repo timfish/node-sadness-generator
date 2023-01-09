@@ -9,6 +9,7 @@ pub fn raise_abort() {
 
 #[napi]
 pub fn raise_bus() {
+    #[cfg(not(target_os = "windows"))]
     unsafe {
         sadness_generator::raise_bus();
     }
@@ -44,6 +45,7 @@ pub fn raise_stack_overflow() {
 
 #[napi]
 pub fn raise_stack_overflow_in_non_rust_thread(uses_longjmp: bool) {
+    #[cfg(not(target_os = "windows"))]
     unsafe {
         sadness_generator::raise_stack_overflow_in_non_rust_thread(uses_longjmp);
     }
@@ -51,6 +53,7 @@ pub fn raise_stack_overflow_in_non_rust_thread(uses_longjmp: bool) {
 
 #[napi]
 pub fn raise_stack_overflow_in_non_rust_thread_normal() {
+    #[cfg(not(target_os = "windows"))]
     unsafe {
         sadness_generator::raise_stack_overflow_in_non_rust_thread_normal();
     }
