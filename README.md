@@ -8,7 +8,7 @@ It's just an [`napi-rs`](https://github.com/napi-rs/napi-rs) wrapper for [`sadne
 ```ts
 const { raiseAbort, raiseSegfault, raiseIllegalInstruction } = require('sadness-generator');
 
-// Crash!
+// Crash now!
 raiseSegfault();
 ```
 
