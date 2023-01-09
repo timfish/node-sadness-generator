@@ -1,0 +1,48 @@
+{
+  "name": "sadness-generator",
+  "version": "0.0.3",
+  "description": "Crash your node process with different kinds of sadness",
+  "main": "index.js",
+  "repository": "git@github.com:timfish/sadness-generator.git",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "*.node"
+  ],
+  "napi": {
+    "name": "sadness-generator",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "i686-pc-windows-msvc",
+        "aarch64-unknown-linux-gnu",
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-apple-darwin",
+        "aarch64-pc-windows-msvc"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">= 10.16.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "test": "node ./test.js"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.14.1",
+    "prettier": "^2.4.1"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all",
+    "singleQuote": true
+  }
+}
