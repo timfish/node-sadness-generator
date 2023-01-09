@@ -1,9 +1,9 @@
 {
   "name": "sadness-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Crash your node process with different kinds of sadness",
   "main": "index.js",
-  "repository": "git@github.com:timfish/sadness-generator.git",
+  "repository": "git@github.com:timfish/node-sadness-generator.git",
   "license": "MIT",
   "types": "index.d.ts",
   "files": [
